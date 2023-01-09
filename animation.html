@@ -7,18 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
     <style>
-        @keyframes sliding{
-            from{
+        @keyframes sliding {
+            0% {
                 background-color: limegreen;
                 left: 0;
+                top: 0;
+                background-color: yellow;
+                
             }
-            to{
-                background-color: magenta;
-                left: 200px;
+
+            25% {
+                top: 225px;
+                background-color: red;
+                transform: scale(0.5);
+            }
+
+            50% {
+                top: 0;
+                background-color: yellow;
+                transform: scale(1);
+                
+            }
+            75%{
+                top: 225px;
+                background-color: red;
+                transform: scale(0.5);
+                
+            }
+
+            100% {
+                
+                left: 400px;
+                top: 0;
+                background-color: yellow;
             }
         }
+
         .stage {
-            width: 300px;
+            width: 500px;
             height: 300px;
             background-color: lightskyblue;
         }
@@ -29,7 +55,7 @@
             background-color: limegreen;
             border-radius: 50%;
             position: relative;
-            animation: sliding 1s ease-in-out 0.5s infinite alternate ;
+            animation: sliding 2s ease-in-out 0.5s infinite alternate;
             animation-play-state: running;
         }
     </style>
